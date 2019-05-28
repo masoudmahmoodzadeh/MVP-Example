@@ -70,5 +70,19 @@ public class MVP_BaseUtils {
                 .concat(methodName), error.getMessage());
     }
 
+    public String getMethodName() {
+
+        try {
+
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            return stackTraceElements[3].getMethodName();
+
+        } catch (Exception e) {
+
+            log(getClass().getSimpleName(), "getMethodName", e.toString());
+        }
+
+        return "getMethodName";
+    }
 
 }
