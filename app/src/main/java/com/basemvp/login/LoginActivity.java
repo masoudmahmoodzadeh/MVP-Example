@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.basemvp.MainActivity;
+import com.basemvp.main.MainActivity;
 import com.basemvp.R;
 import com.mvp_module.MVP_AnimationUtils;
 import com.mvp_module.MVP_BaseActivity;

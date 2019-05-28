@@ -2,9 +2,7 @@ package com.basemvp.splash;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 
-import com.basemvp.MainActivity;
 import com.basemvp.R;
 import com.basemvp.login.LoginActivity;
 import com.mvp_module.MVP_AnimationUtils;

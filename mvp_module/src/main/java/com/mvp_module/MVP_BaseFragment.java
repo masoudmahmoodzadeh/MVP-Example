@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mvp_module.interfaces.MVP_IApp;
-import com.mvp_module.interfaces.MVP_IBackPressedButton;
+import com.mvp_module.interfaces.MVP_IBackPressedFragment;
 import com.mvp_module.interfaces.MVP_IBaseRepository;
 import com.mvp_module.interfaces.MVP_IBaseView;
 
@@ -20,7 +20,7 @@ import com.mvp_module.interfaces.MVP_IBaseView;
  * Created by Masoud pc on 8/5/2018.
  */
 public abstract class MVP_BaseFragment extends Fragment
-        implements MVP_IBaseView, MVP_IApp, MVP_IBackPressedButton {
+        implements MVP_IBaseView, MVP_IApp, MVP_IBackPressedFragment {
 
     protected MVP_BaseActivity baseActivity;
     private View rootView;

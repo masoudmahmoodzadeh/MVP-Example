@@ -1,9 +1,12 @@
 package com.mvp_module;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
 import android.util.Log;
 import android.view.Display;
+import android.view.Gravity;
+import android.view.Window;
 import android.view.WindowManager;
 
 
@@ -84,5 +87,30 @@ public class MVP_BaseUtils {
 
         return "getMethodName";
     }
+
+    public void normalDialogStyle(Dialog dialog, int width, int height) {
+
+        Window window = dialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+
+        wlp.gravity = Gravity.BOTTOM;
+
+        wlp.y = 15;
+
+        wlp.width = width - 30;
+        if (height != -1)
+            wlp.height = height;
+
+
+        window.getAttributes().windowAnimations = R.style.animation_dialog_normal;
+
+        window.setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+        window.setAttributes(wlp);
+
+
+    }
+
 
 }

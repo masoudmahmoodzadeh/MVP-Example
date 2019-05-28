@@ -1,12 +1,19 @@
-package com.basemvp;
+package com.basemvp.main;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
+import com.basemvp.R;
+import com.basemvp.details.DetailsDialog;
 import com.mvp_module.MVP_AnimationUtils;
 import com.mvp_module.MVP_BaseActivity;
 
 public class MainActivity extends MVP_BaseActivity {
+
+    private Button btn_dialog;
+
 
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
@@ -36,6 +43,7 @@ public class MainActivity extends MVP_BaseActivity {
     @Override
     public void findView() {
 
+        btn_dialog = findViewById(R.id.btn_dialog);
     }
 
     @Override
@@ -51,6 +59,14 @@ public class MainActivity extends MVP_BaseActivity {
     @Override
     public void onClick() {
 
+        btn_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DetailsDialog detailsDialog = new DetailsDialog();
+                detailsDialog.show(provideFragmentManager() , detailsDialog.getClass().getSimpleName());
+            }
+        });
     }
 
     @Override
