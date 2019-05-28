@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.basemvp.MainActivity;
 import com.basemvp.R;
+import com.basemvp.login.LoginActivity;
 import com.mvp_module.MVP_AnimationUtils;
 import com.mvp_module.MVP_BaseActivity;
 
@@ -78,7 +79,7 @@ public class SplashActivity extends MVP_BaseActivity implements Splash_IView {
     @Override
     public void goToNextActivity() {
 
-        Intent intent = MainActivity.getStartIntent(this);
+        Intent intent = LoginActivity.getStartIntent(this);
         startActivity(intent);
 
         finish();
