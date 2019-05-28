@@ -80,7 +80,7 @@ public abstract class MVP_BaseActivity extends AppCompatActivity
         setSlideMenu();
 
     }
-    
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
