@@ -28,5 +28,6 @@ dependencies {
     implementation project(':mvp_module')
 
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
 
 }

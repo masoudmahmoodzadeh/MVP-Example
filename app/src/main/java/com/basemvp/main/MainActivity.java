@@ -7,12 +7,13 @@ import android.widget.Button;
 
 import com.basemvp.R;
 import com.basemvp.details.DetailsDialog;
+import com.basemvp.list.ListFragment;
 import com.mvp_module.MVP_AnimationUtils;
 import com.mvp_module.MVP_BaseActivity;
 
 public class MainActivity extends MVP_BaseActivity {
 
-    private Button btn_dialog;
+    private Button btn_dialog , btn_bottomSheet;
 
 
     public static Intent getStartIntent(Context context) {
@@ -44,10 +45,12 @@ public class MainActivity extends MVP_BaseActivity {
     public void findView() {
 
         btn_dialog = findViewById(R.id.btn_dialog);
+        btn_bottomSheet = findViewById(R.id.btn_bottomSheet);
     }
 
     @Override
     public void initView() {
+
 
     }
 
@@ -67,10 +70,26 @@ public class MainActivity extends MVP_BaseActivity {
                 detailsDialog.show(provideFragmentManager() , detailsDialog.getClass().getSimpleName());
             }
         });
+
+        btn_bottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
     }
 
     @Override
     public MVP_BaseActivity getBaseActivity() {
         return this;
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        transactionFragment(R.id.container , new ListFragment() , true);
     }
 }
