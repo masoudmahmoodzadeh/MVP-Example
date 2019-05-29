@@ -47,6 +47,7 @@ public class ListFragment extends MVP_BaseFragment implements List_IView {
     @Override
     public void backPressedButton(Fragment fragment) {
 
+        getBaseActivity().finish();
     }
 
     @Override

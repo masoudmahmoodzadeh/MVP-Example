@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.basemvp.R;
 import com.basemvp.details.DetailsDialog;
 import com.basemvp.list.ListFragment;
+import com.basemvp.teams.TeamsDialog;
 import com.mvp_module.MVP_AnimationUtils;
 import com.mvp_module.MVP_BaseActivity;
 
@@ -75,6 +76,8 @@ public class MainActivity extends MVP_BaseActivity {
             @Override
             public void onClick(View view) {
 
+                TeamsDialog teamsDialog = new TeamsDialog();
+                teamsDialog.show(provideFragmentManager() , teamsDialog.getClass().getSimpleName());
 
             }
         });
